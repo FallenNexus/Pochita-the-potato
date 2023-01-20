@@ -15,5 +15,90 @@
     <p>Insert text once I have acquired knowledge here</p> <!--paragraph text shown on the page-->
     <input type="button" value="Click me!" onclick="alert('You took demands from a computer... That is sad');" /> 
     <!--the pop up thing that yells at you like canvas when it wont upload-->
+    <br/>
+    <br/>
+    <p> <!--This will show the current countdown number-->
+        Countdown: <span id="countdown"></span>
+        </p>
+    
+ <script>
+    //the countdown for week two assignment
+    var currTime = 50; //the number that shows up in the area above
+    var timeout = 0; //the delay once the page is loaded before the set timeout starts
+    var countdownElem = document.getElementById("countdown"); //this allows a html fucntion to work in javascript and is shorter
+    var timeoutIncrement = 5000; //time in milliseconds
+
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime; //write all code between the {}
+        currTime = currTime - 5; //decreases the countdown by 5
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement; //sets the new count down to start at the decreased value
+    
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    setTimeout(function(){
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+
+    timeout = timeout + timeoutIncrement;
+    
+    setTimeout(function(){
+        alert("Blastoff!"); //alert that pops up once countdown hits zero
+        countdownElem.innerHTML = currTime;
+        currTime = currTime - 5;
+    }, timeout);
+//no timeout = timeout + timeoutIncrement since there is no further subtractions
+    
+    </script>
+
 </body>
 </html>
