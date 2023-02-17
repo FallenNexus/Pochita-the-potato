@@ -2,7 +2,30 @@
 function startButtonClick(){var countdownElem = document.getElementById("countdown");
 runTimer(countdownElem);}
 function stopButtonClick(){}
+//this function we ask for a first and last name, and badge number
+//the name need to be less than 20 characters and the badge number needs to be 3 characters or less
+function getUserInput(){
+    var fullName = " ";
+    var badgeNumber = 0;
+    do{
+        var firstName = prompt("Please enter your first name (under 10 characters)");
+        var lastName = prompt("Please enter your last name");
+        fullName = firstName + " " + lastName;
+        if (fullName.length > 20){
+            alert("Please enter a shorter name. Legnth was: " + fullName.length);}
+        }
+while(fullName.length > 20);
 
+do{
+    badgeNumber = prompt("Please enter your badge number (3 digits max): ");
+    if (badgeNumber > 999){alert("Please enter a badge number with 3 digits or fewer.");
+}
+
+}while(badgeNumber > 999);
+
+    return fullName + " " + badgeNumber;
+
+ }
 //this is the new countdown fucntion
 function runTimer(countdownElem){
 //the countdown for week two assignment
