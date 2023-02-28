@@ -29,7 +29,8 @@
     <!--the pop up thing that yells at you like canvas when it wont upload-->
     <br/>
     <br/>
-    <input id="clickMe" type="button" value="Launch!" onclick="startButtonClick();"  />
+    <input id="btnStart" type="button" value="Launch!" onclick="startButtonClick();"  />
+    <input id="btnStop" type="button" value="Abort!" onclick="stopButtonClick();"  />
     <p> <!--This will show the current countdown number-->
         Welcome, <span id = "userNameBadge"></span>
         <p>
@@ -38,8 +39,8 @@
 </body>
 
 <script>
-var userInfo = getUserInput();
-document.getElementById("userNameBadge").innerHTML = userInfo;
+//var userInfo = getUserInput();
+//document.getElementById("userNameBadge").innerHTML = userInfo;
 
 </script>
 </html>
