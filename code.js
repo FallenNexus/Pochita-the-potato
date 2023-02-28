@@ -1,7 +1,21 @@
-//empty functions; code will be added later
-function startButtonClick(){var countdownElem = document.getElementById("countdown");
+var arrInterval = new Array();
+
+function startButtonClick(){
+    document.getElementById("btnStart").disabled = true;
+   document.getElementById("btnStop").disabled = false;
+    var countdownElem = document.getElementById("countdown");
 runTimer(countdownElem);}
-function stopButtonClick(){}
+
+
+function stopButtonClick(){
+   document.getElementById("btnStart").disabled = false;
+   document.getElementById("btnStop").disabled = true;
+   
+    for (counter = 0; counter < 11; counter++){
+        clearTimeout(arrInterval[counter]);
+    }
+
+}
 //this function we ask for a first and last name, and badge number
 //the name need to be less than 20 characters and the badge number needs to be 3 characters or less
 function getUserInput(){
@@ -31,12 +45,14 @@ function runTimer(countdownElem){
 //the countdown for week two assignment
 var currTime = 50; //the number that shows up in the area above
 var timeout = 0; //the delay once the page is loaded before the set timeout starts
-var timeoutIncrement = 5000; //time in milliseconds
+var timeoutIncrement = 1000; //time in milliseconds
 /*adding the loop below; the loop type is for loop. it can commonly refered to with the letter i. counter++ just means counter + 1
 */
 for(var counter=0; counter < 11; counter++){
 
-    setTimeout(function(){
+    //how to make the thing stop
+
+    arrInterval[counter] = setTimeout(function(){
         if(currTime == 0){
             alert("Blastoff!"); //alert that pops up once countdown hits zero
             countdownElem.innerHTML = currTime;
