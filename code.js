@@ -1,12 +1,29 @@
+/*function playSound(soundSrc){
+    var sound = document.createElement("audio");
+    sound.src = soundSrc;
+    sound.setAttribute("controls", "auto");
+    document.body.appendChild(sound);
+    play = function(){
+            sound.play();
+    }
+    stop = function(){
+        sound.pause();
+    }
+}
+JavaScript version to play sound like the html. I cut out this part since it was less reliable, but it did work on my computer when I tried it.
+*/
+
+//the array that controls the fuctions that make the start and stop buttons called in the html
 var arrInterval = new Array();
 
+//starts countdown on click
 function startButtonClick(){
     document.getElementById("btnStart").disabled = true;
    document.getElementById("btnStop").disabled = false;
     var countdownElem = document.getElementById("countdown");
 runTimer(countdownElem);}
 
-
+//stops countdown on click
 function stopButtonClick(){
    document.getElementById("btnStart").disabled = false;
    document.getElementById("btnStop").disabled = true;
@@ -16,8 +33,8 @@ function stopButtonClick(){
     }
 
 }
-//this function we ask for a first and last name, and badge number
-//the name need to be less than 20 characters and the badge number needs to be 3 characters or less
+//this function asks for a first and last name, and badge number
+//the name needs to be less than 20 characters and the badge number needs to be 3 characters or less
 function getUserInput(){
     var fullName = " ";
     var badgeNumber = 0;
@@ -42,15 +59,15 @@ do{
  }
 //this is the new countdown fucntion
 function runTimer(countdownElem){
-//the countdown for week two assignment
+//the countdown from the week two assignment
 var currTime = 50; //the number that shows up in the area above
 var timeout = 0; //the delay once the page is loaded before the set timeout starts
-var timeoutIncrement = 1000; //time in milliseconds
-/*adding the loop below; the loop type is for loop. it can commonly refered to with the letter i. counter++ just means counter + 1
+var timeoutIncrement = 5000; //time in milliseconds
+/*adding the loop below; the loop type is a for loop. It can commonly be refered to with the letter i. counter++ just means counter + 1
 */
 for(var counter=0; counter < 11; counter++){
 
-    //how to make the thing stop
+    //how to make the thing stop so the stop button actually works
 
     arrInterval[counter] = setTimeout(function(){
         if(currTime == 0){
@@ -65,7 +82,6 @@ for(var counter=0; counter < 11; counter++){
         }
     currTime = currTime - 5; //decreases the countdown by 5
     }, timeout);
-
     timeout = timeout + timeoutIncrement; //sets the new count down to start at the decreased value
     }
    
