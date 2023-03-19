@@ -16,8 +16,9 @@
     <style>
     p{
     font-size: 16pt;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
     }
+    /* above is how I set the background color, and fonts; to add comments in here, they have to be in this style since its css */
 </style>
 </head>
 <body> <!--End the last thing with the slashes to make these not weird-->
@@ -29,9 +30,10 @@
     <!--the pop up thing that yells at you like canvas when it wont upload-->
     <br/>
     <br/>
+    <!--pulls the start and stop functions from JavaScript and makes buttons that can be clicked-->
     <input id="btnStart" type="button" value="Launch!" onclick="startButtonClick();"  />
     <input id="btnStop" type="button" value="Abort!" onclick="stopButtonClick();"  />
-    <p> <!--This will show the current countdown number-->
+    <p> <!--This will show the current countdown number and log in information that has been input-->
         Welcome, <span id = "userNameBadge"></span>
         <p>
         Countdown: <span id="countdown"></span>    
@@ -39,8 +41,20 @@
 </body>
 
 <script>
-//var userInfo = getUserInput();
-//document.getElementById("userNameBadge").innerHTML = userInfo;
+//this gets the user input to be displayed by the code above.
+var userInfo = getUserInput();
+document.getElementById("userNameBadge").innerHTML = userInfo;
 
+//playSound("watermarked_Neon_Beach_Dream_instrumental_2_10.mp3");
+//above is the JavaScript music called in the html, also commented out since I saw no reason to have two on the page.
 </script>
+
+<audio controls>
+    <source src="watermarked_Neon_Beach_Dream_instrumental_2_10.mp3" type="audio/mpeg"
+    Your browser does not support audio
+
+</audio>
+<!--above is the entire code to put the music on the code. I went with this since it was more likely to work-->
+
+
 </html>
