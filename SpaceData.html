@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="stylesheet.css">
+    <script src="DataLauncher.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>UAT Space Program Data</h1> <!--this is the title of the page-->
+    <img src="UATspaceLogo.jpg">
+    <br>
+    The current time is: <span id="timeStamp"><br>Press start for the current time</span>
+    <br>
+    <button id="startButton" onclick="start();">Start</button> <!--makes the buttons work by pulling the code from Datalauncher.js-->
+    <button id="stopButton" onclick="stop();">Stop</button>
+    <br>
+    <!--The following data is hard caded from the week 12 assignment-->
+    <table id-"Data"> <!--this name does not appear on the page-->
+        <thead>
+            <th>Data type</th> <!-- header on the left side-->
+            <th>Reading</th> <!--header on the right side-->
+        </thead>    
+        <tbody>
+            <tr id="Seconds"> <!--titling what the name is, does not appear as text on the page-->
+                <td>Time elapsed:</td> <!--the type of data listed on the left side-->
+                <td>1210 Seconds</td> <!--the value listed on the right side-->
+            </tr>
+            <tr id="Latitude">
+                <td>Latitude:</td>
+                <td>0</td>
+            </tr>
+            <tr id="Longitude">
+                <td>Longitude:</td>
+                <td>0</td>
+            </tr>
+            <tr id="gpsAlt">
+                <td>GPS Altitude:</td>
+                <td>0</td>
+            </tr>
+            <tr id="bmpSensorAlt">
+                <td>BMP Sensor Altitude:</td>
+                <td>30383.04</td>
+            </tr>
+            <tr id="bmpSensorPres">
+                <td>BMP Sensor Pressure:</td>
+                <td>2.34</td>
+            </tr>
+            <tr id="bmpSensorTemp">
+                <td>BMP Sensor Temperature:</td>
+                <td>0</td>
+            </tr>
+            <tr id="DigitalSensorTemp">
+                <td>Digital Sensor Temperature:</td>
+                <td>24</td>
+            </tr>
+            <tr id="cssSensorTemp">
+                <td>CSS Sensor Temperature:</td>
+                <td>32.48</td>
+            </tr>
+            <tr id="cssSensorEco2">
+                <td>CSS Sensor eCO2:</td>
+                <td>422</td>
+            </tr>
+            <tr id="cssSensorTVOC">
+                <td>CSS Sensor TVOC:</td>
+                <td>3</td>
+            </tr>
+            <tr id="UV">
+                <td>UV:</td>
+                <td>6</td>
+            </tr>
+            <tr id="AccelX">
+                <td>Aceleration X:</td>
+                <td>-0.75</td>
+            </tr>
+            <tr id="AccelY">
+                <td>Aceleration Y:</td>
+                <td>-0.77</td>
+            </tr>
+            <tr id="AccelZ">
+                <td>Acceleration Z:</td>
+                <td>9.35</td>
+            </tr>
+            <tr id="MagnetX">
+                <td>Magnetic X:</td>
+                <td>-0.08</td>
+            </tr>
+            <tr id="MagnetY">
+                <td>Magnetic Y:</td>
+                <td>0.36</td>
+            </tr>
+            <tr id="MagnetZ">
+                <td>Magnetic Z:</td>
+                <td>-0.53</td>
+            </tr>
+            <tr id="GyroX">
+                <td>Gyroscope X:</td>
+                <td>4.44</td>
+            </tr>
+            <tr id="GyroY">
+                <td>Gyroscope Y:</td>
+                <td>-0.95</td>
+            </tr>
+            <tr id="GyroZ">
+                <td>Gyroscope Z:</td>
+                <td>1.72</td>
+            </tr>
+    </tbody>
+
+
+
+    </table> <!--ends the table-->
+
+</body>
+</html>
