@@ -8,20 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UAT Space Page</title>
     <script src = "code.js"></script>
-    <style>
-        body{
-   background-color: darkturquoise;
-        }
-    </style>
-    <style>
-    p{
-    font-size: 16pt;
-    font-family: Arial, Helvetica, sans-serif; 
-    }
+    <link rel ="stylesheet" href="stylesheet.css">
     /* above is how I set the background color, and fonts; to add comments in here, they have to be in this style since its css */
 </style>
 </head>
 <body> <!--End the last thing with the slashes to make these not weird-->
+    <ul>
+        <li><a class="active" href="Default.html">Home</a></li>
+        <li><a href="spacepage.html">Space Page</a></li>
+        <li><a href="SpaceData.html">Space Data</a></li>
+        <li><a href="Boards.html">Boards</a></li>
+      </ul>
+      
+    <div class = "bgimage">
+        <div class="hero">
+    
     <h1>UAT Space Page</h1> <!-- Title header shown on the page-->   
     <img src="UATspaceLogo.jpg" alt="UAT Space Logo" /> <!--Image on the page. alt is the image description like for screen readers-->
     <br/> <!--br is a line break-->
@@ -38,6 +39,7 @@
         <p>
         Countdown: <span id="countdown"></span>    
     </p>
+</div>
 </body>
 
 <script>
