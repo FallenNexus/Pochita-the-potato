@@ -7,13 +7,30 @@
     <title>Document</title>
     <link rel ="stylesheet" href="stylesheet.css">
     <script src="DataLauncher.js"></script>
+    <script src="dataLoader.js"></script>
     <style>
-
     </style>
 </head>
 
 <body>
-    <h1>UAT Space Program Data</h1> <!--this is the title of the page-->
+    <ul> <!--links the pages to the buttons on the top-->
+        <li><a class="active" href="Default.html">Home</a></li>
+        <li><a href="spacepage.html">Space Page</a></li>
+        <li><a href="SpaceData.html">Space Data</a></li>
+        <li><a href="Boards.html">Boards</a></li>
+      </ul>
+      
+    <div class = "bgimage"> <!--pulls the classes from the css stylesheet-->
+        <div class="hero">
+
+
+  
+    <script>
+        var index = 0;
+        var data = getData();
+    </script>
+   
+   <h1>UAT Space Program Data</h1> <!--this is the title of the page-->
     <img src="UATspaceLogo.jpg">
     <br>
     The current time is: <span id="timeStamp"><br>Press start for the current time</span>
@@ -22,13 +39,13 @@
     <button id="stopButton" onclick="stop();">Stop</button>
     <br>
     <!--The following data is hard caded from the week 12 assignment-->
-    <table id-"Data"> <!--this name does not appear on the page-->
+    <table id="data"> <!--this name does not appear on the page-->
         <thead>
             <th>Data type</th> <!-- header on the left side-->
             <th>Reading</th> <!--header on the right side-->
         </thead>    
         <tbody>
-            <tr id="Seconds"> <!--titling what the name is, does not appear as text on the page-->
+            <tr id="SecondsData"> <!-- titling what the name is, does not appear as text on the page -->
                 <td>Time elapsed:</td> <!--the type of data listed on the left side-->
                 <td>1210 Seconds</td> <!--the value listed on the right side-->
             </tr>
@@ -111,12 +128,13 @@
             <tr id="GyroZ">
                 <td>Gyroscope Z:</td>
                 <td>1.72</td>
+            
             </tr>
     </tbody>
 
 
 
     </table> <!--ends the table-->
-
+</div>
 </body>
 </html>
